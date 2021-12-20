@@ -1,0 +1,14 @@
+/* CONFIGS */
+@import './configs/reset.scss';
+@import './configs/fonts.scss';
+@import './configs/vars.scss';
+@import './configs/global.scss';
+
+/* PARTIALS */
+@import './partials/button.scss';
+@import './partials/page.scss';
+
+/* SECTIONS */
+@import './sections/welcome.scss';
+@import './sections/header.scss';
+@import './sections/accordion.scss';

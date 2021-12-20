@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Roboto-Thin";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-thin.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-thin.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-thin.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-light.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-light.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-light.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Medium";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-medium.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-medium.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-medium.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-regular.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Bold";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-bold.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-bold.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-bold.woff2") format("woff2");
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Roboto-Black";
+  src:
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-black.ttf") format("ttf"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-black.woff") format("woff"),
+    local('fonts/roboto'), url("/src/fonts/roboto/roboto-black.woff2") format("woff2");
+  font-display: block;
+}

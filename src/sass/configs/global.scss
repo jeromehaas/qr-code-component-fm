@@ -1,0 +1,20 @@
+@import './vars.scss';
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+	appearance: none;
+  font-family: 'Roboto-Light';
+  color: $black;
+  line-height: $default-line-height;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  cursor: url('/src/icons/cursor/cursor.svg') 0 0, auto !important;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+
+
