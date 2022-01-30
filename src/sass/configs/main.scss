@@ -1,14 +1,51 @@
-body {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 50vh;
+@import './vars.scss';
+
+.page {
+	background-color: $light-grey;
+	
+	&__wrapper {
+		min-height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 27px;
+	}
+
 }
 
-.title {
-	font-size: 80px;
-	color: darkblue;
-	font-weight: bold;
-	text-transform: uppercase;
-	background-color: red;
+.card {
+	background-color: $white;
+	border-radius: 20px;
+	padding: 16px;
+	width: 100%;
+	max-width: 320px;
+	margin: 0 auto;
+	box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
+
+	&__image {
+		width: 100%;
+		display: block;
+		margin-bottom: 24px;
+		border-radius: 10px;
+	}
+
+	&__title {
+		font-family: $font-bold;
+		text-align: center;
+		font-size: 22px;
+		margin-bottom: 16px;
+	}
+
+	&__text {
+		font-family: $font-medium;
+		color: $grey;
+		font-size: 15px;
+		text-align: center;
+	}
+
 }
+
+
+
+

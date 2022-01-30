@@ -1,25 +1,17 @@
 /* COLORS */
-$black: #0c080e;
-$white: #ffffff;
-$yellow: #ffca0d;
-$green: #008281;
-$grey: #dadada;
-$red: #EB4A4B;
+$blue: #2C7DFA;
+$blue-shade: #3685FF;
+$dark-navy: #1F314F;
+$grey: #7D889E;
+$light-grey: #D5E1EF;
+$white: #FFFFFF;
 
 /* FONTS */
-$font-thin: 'Roboto-Thin';
-$font-light: 'Roboto-Light';
-$font-regular: 'Roboto-Regular';
-$font-semibold: 'Roboto-Semibold';
-$font-bold: 'Roboto-Bold';
-$font-extrabold: 'Roboto-Extrabold';
-$default-font-color: $black;
+$font-thin: 'Outfit-Thin';
+$font-light: 'Outfit-Light';
+$font-regular: 'Outfit-Regular';
+$font-semibold: 'Outfit-Semibold';
+$font-bold: 'Outfit-Bold';
+$font-extrabold: 'Outfit-Extrabold';
+$default-font-color: $dark-navy;
 $default-line-height: 1.5;
-
-/* FONT-SIZES */
-$font-small: 12px;
-$font-medium: 16px;
-$font-big: 20px;
-
-/* LAYOUT */
-$max-width: 1100px;

@@ -4,11 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 	appearance: none;
-  font-family: 'Roboto-Light';
-  color: $black;
+  font-family: 'Outfit-Light';
+	font-size: 30px;
+  color: $dark-navy;
   line-height: $default-line-height;
-  scrollbar-width: none;
-  scroll-behavior: smooth;
   cursor: url('/src/icons/cursor/cursor.svg') 0 0, auto !important;
 }
 

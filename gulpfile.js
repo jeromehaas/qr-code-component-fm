@@ -37,7 +37,7 @@ const filesPath = {
 	sass: './src/sass/**/*.scss',
 	js: './src/js/**/*.js',
 	img: './src/img/**/*.+(png|jpg|gif|svg)',
-	html: './src/html/**/*.kit',
+	html: './src/**/*.kit',
 	icons: './src/icons/**/*.svg',
 	fonts: './src/fonts/**/*.+(ttf|woff|woff2)',
 }
@@ -64,7 +64,7 @@ const sassTask = (done) => {
 // JS TASK
 const jsTask = (done) => {
 	gulp.src([
-		'./src/js/accordion.js', 
+		'./src/js/qrcode.js', 
 	])
 	.pipe(plumber({errorHandler: notifier.error}))
 	.pipe(babel({
@@ -87,7 +87,7 @@ const kitTask = (done) => {
 		.pipe(kit())
 		.pipe(htmlmin({collapseWhitespace: true}))
 		.pipe(notifier.success('kit'))
-		.pipe(dest('./dist/html')
+		.pipe(dest('./dist')
 	);
 	done();	
 }
