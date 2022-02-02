@@ -1,0 +1,1 @@
+{"version":3,"sources":["page.css"],"names":[],"mappings":"AAIA,MACE,wBAA0B,CAC3B,AACD,eACE,YAAc,CACf","file":"page.css","sourcesContent":["/* COLORS */\n/* FONTS */\n/* FONT-SIZES */\n/* LAYOUT */\n.page {\n  background-color: #7D889E;\n}\n.page__wrapper {\n  padding: 32px;\n}"]}

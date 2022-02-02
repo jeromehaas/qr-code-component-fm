@@ -1,0 +1,1 @@
+{"version":3,"sources":["card.css"],"names":[],"mappings":"AAIA,MACE,oBAAsB,CACvB","file":"card.css","sourcesContent":["/* COLORS */\n/* FONTS */\n/* FONT-SIZES */\n/* LAYOUT */\n.card {\n  background-color: red;\n}"]}
