@@ -9,8 +9,6 @@ const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
-const kit = require('gulp-kit');
-const htmlmin = require('gulp-htmlmin');
 const autoprefixer = require('gulp-autoprefixer');
 const babel = require('gulp-babel');
 const del = require('del');
@@ -80,18 +78,6 @@ const jsTask = (done) => {
 	done();
 }
 
-// KIT TASK
-const kitTask = (done) => {
-	gulp.src(filesPath.html)
-		.pipe(plumber({errorHandler: notifier.error}))
-		.pipe(kit())
-		.pipe(htmlmin({collapseWhitespace: true}))
-		.pipe(notifier.success('kit'))
-		.pipe(dest('./dist')
-	);
-	done();	
-}
-
 // IMAGEMIN TASK
 const imgTask = (done) => {
 	gulp.src(filesPath.img)
@@ -126,7 +112,6 @@ const watchTask = () => {
 	});
   gulp.watch(filesPath.sass, sassTask).on("change", browserSync.reload);
   gulp.watch(filesPath.js, jsTask).on("change", browserSync.reload);
-  gulp.watch(filesPath.html, kitTask).on("change", browserSync.reload);
   gulp.watch(filesPath.img, imgTask).on("change", browserSync.reload);
   gulp.watch(filesPath.icons, iconsTask).on("change", browserSync.reload);
 }
@@ -146,10 +131,9 @@ exports.sassTask = sassTask;
 exports.jsTask = jsTask;
 exports.imgTask = imgTask;
 exports.iconsTask = iconsTask;
-exports.kitTask = kitTask;
 exports.watchTask = watchTask;
 exports.fontTask = fontTask;
 exports.clearCacheTask = clearCacheTask;
 exports.cleanDistTask = cleanDistTask;
-exports.build = parallel(sassTask, jsTask, imgTask, kitTask, iconsTask, fontTask);
+exports.build = parallel(sassTask, jsTask, imgTask, iconsTask, fontTask);
 exports.default = series(exports.build, watchTask);
