@@ -4,13 +4,11 @@ const sass = require('gulp-sass')(require('sass'));
 const sourcemaps = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 const cssnano = require('gulp-cssnano');
-const uglify = require('gulp-uglify');
 const rename = require('gulp-rename');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const cache = require('gulp-cache');
 const autoprefixer = require('gulp-autoprefixer');
-const babel = require('gulp-babel');
 const del = require('del');
 const plumber = require('gulp-plumber');
 const notifier = require('gulp-notifier');
@@ -59,25 +57,6 @@ const sassTask = (done) => {
 	done();
 }
 
-// JS TASK
-const jsTask = (done) => {
-	gulp.src([
-		'./src/js/qrcode.js', 
-	])
-	.pipe(plumber({errorHandler: notifier.error}))
-	.pipe(babel({
-		presets: ['@babel/env']
-}))
-	.pipe(concat('main.js'))
-	.pipe(uglify())
-	.pipe(rename({
-		suffix: '.min',
-	}))
-	.pipe(dest('./dist/js'))
-	.pipe(notifier.success('js'))
-	done();
-}
-
 // IMAGEMIN TASK
 const imgTask = (done) => {
 	gulp.src(filesPath.img)
@@ -111,7 +90,6 @@ const watchTask = () => {
 		open: false
 	});
   gulp.watch(filesPath.sass, sassTask).on("change", browserSync.reload);
-  gulp.watch(filesPath.js, jsTask).on("change", browserSync.reload);
   gulp.watch(filesPath.img, imgTask).on("change", browserSync.reload);
   gulp.watch(filesPath.icons, iconsTask).on("change", browserSync.reload);
 }
@@ -128,12 +106,11 @@ const cleanDistTask = (done) => {
 }
 
 exports.sassTask = sassTask;
-exports.jsTask = jsTask;
 exports.imgTask = imgTask;
 exports.iconsTask = iconsTask;
 exports.watchTask = watchTask;
 exports.fontTask = fontTask;
 exports.clearCacheTask = clearCacheTask;
 exports.cleanDistTask = cleanDistTask;
-exports.build = parallel(sassTask, jsTask, imgTask, iconsTask, fontTask);
+exports.build = parallel(sassTask, imgTask, iconsTask, fontTask);
 exports.default = series(exports.build, watchTask);
